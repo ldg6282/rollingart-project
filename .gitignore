@@ -36,3 +36,7 @@ yarn-error.*
 
 #test
 coverage/
+
+# Expo and EAS configuration files
+app.json
+eas.json
