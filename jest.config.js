@@ -8,20 +8,27 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: [
     "src/**/*.{js,jsx,ts,tsx}",
+    "app/**/*.{js,jsx,ts,tsx}",
     "!src/**/*.d.ts",
     "!src/index.js",
     "!src/reportWebVitals.js",
     "!**/node_modules/**",
     "!**/vendor/**",
+    "!src/hooks/**",
+    "!src/styles/**",
+    "!src/utils/**",
   ],
   coverageReporters: ["text", "lcov", "clover"],
   coverageDirectory: "<rootDir>/coverage",
   testMatch: [
     "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
     "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}",
+    "<rootDir>/app/**/__tests__/**/*.{js,jsx,ts,tsx}",
+    "<rootDir>/app/**/*.{spec,test}.{js,jsx,ts,tsx}",
   ],
   moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
+    "^@app/(.*)$": "<rootDir>/app/$1",
   },
 };
