@@ -35,7 +35,7 @@ export default function MainScreen() {
     <>
       <View style={styles.container}>
         <View style={styles.main}>
-          <Image style={styles.logoImage} source={rogoImage} />
+          <Image testID="logo-image" style={styles.logoImage} source={rogoImage} />
           <BallCustomization />
           <CustomButton
             containerStyle={[styles.button, styles.brightGreen]}

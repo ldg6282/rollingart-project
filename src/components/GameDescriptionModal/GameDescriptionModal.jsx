@@ -134,14 +134,20 @@ export default function GameDescriptionModal({
         <View style={styles.modalView}>
           <Text style={styles.titleText}>게임 시작</Text>
           <View style={styles.rowWrapper}>
-            <TouchableOpacity onPress={descriptionImages > 0 ? handlePrevImageButtonTouch : null}>
+            <TouchableOpacity
+              testID="prev-button"
+              onPress={descriptionImages > 0 ? handlePrevImageButtonTouch : null}
+            >
               <Image
                 style={descriptionImages > 0 ? styles.arrowImage : styles.arrowImageBlurred}
                 source={arrowButtonImage}
               />
             </TouchableOpacity>
             <Image source={images[descriptionImages]} style={styles.descriptionImage} />
-            <TouchableOpacity onPress={descriptionImages < 7 ? handleNextImageButtonTouch : null}>
+            <TouchableOpacity
+              testID="next-button"
+              onPress={descriptionImages < 7 ? handleNextImageButtonTouch : null}
+            >
               <Image
                 style={
                   descriptionImages < 7
@@ -156,6 +162,7 @@ export default function GameDescriptionModal({
           <Text style={styles.descriptionText2}>{descriptionText2()}</Text>
           <Text style={styles.descriptionText2}>{descriptionText3()}</Text>
           <CustomButton
+            testID="close-button"
             containerStyle={styles.closeButton}
             buttonText="설명 닫기"
             onPress={handleCloseButtonTouch}
