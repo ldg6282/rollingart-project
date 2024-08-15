@@ -50,7 +50,8 @@ module.exports = {
     "global-require": "off",
     "react-native/no-inline-styles": "off",
     "no-plusplus": "off",
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "react/jsx-props-no-spreading": "off"
   },
   settings: {
     react: {
