@@ -29,10 +29,10 @@ export default function LoadingScreen() {
   return (
     <View style={styles.loadingContainer}>
       <Text style={styles.loadingText}>Loading...</Text>
-      <Image style={styles.circleImage} source={circleImage} />
+      <Image style={styles.circleImage} source={circleImage} testID="circle-image" />
       <View style={styles.circleImage}>
-        <View style={styles.ballContainer}>
-          <Canvas style={styles.canvasContainer}>
+        <View style={styles.ballContainer} testID="ball-container">
+          <Canvas style={styles.canvasContainer} testID="canvas-container">
             <ambientLight />
             <directionalLight position={[10, 10, 10]} intensity={1} castShadow />
             <StaticBall currentBallPatternTexture={selectedPattern} />

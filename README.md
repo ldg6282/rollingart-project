@@ -19,25 +19,74 @@ RollingArt는 스마트폰을 기울여 공을 조작해 정해진 길을 따라
 </p>
 <br><br>
 
-# 🛠 Tech Stack
+# 📱 Preview
 
-### | Frontend
+<br>
+<div align="center">
+  <div style="display: inline-block; text-align: center;">
+    <img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMjU0/MDAxNzIzMDQ5MTQ1NzAy.ApOh7xvgSZf2J7R_PopxAUSB-loPkoP1vG07pUc1nFQg.hdOlfOV09jy_76MhLk64by-RIwOXm1Iy1SBKB7gcFNgg.GIF/4.gif?type=w3840" width="250px">
+    <br>
+    <span>튜토리얼 스테이지 게임 설명 화면</span>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <div style="display: inline-block; text-align: center;">
+    <img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMTIx/MDAxNzIzMDQ5NjcxNjg5.-pPTo3kBSrf8vQnM6XWgsaMSF1Tp7JFSS_48JgAvmAAg.KnzaQvJ4vaPUNptRivK_7_X9R0OCepG_mwDYlV_q7YUg.GIF/5.gif?type=w3840" width="250px">
+    <br>
+    <span>튜토리얼 스테이지 플레이 화면</span>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <div style="display: inline-block; text-align: center;">
+    <img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMTMz/MDAxNzIzMDQ5NjcxNjM2.rhV63jY_He9KJbgazh0Q5C_BPZRrzcG-UITQU7yqadIg.O6pXSODl37BLoCblmFqjZjqtYRUcQUdqntjqaZDa3L0g.GIF/2.gif?type=w3840" width="250px">
+    <br>
+    <span>스테이지 1 플레이 화면</span>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+</div>
 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
-![ReactNative](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)
+&nbsp;&nbsp;&nbsp;&nbsp;
 
-### | 3D
-
-![Static Badge](https://img.shields.io/badge/ThreeJs-black?style=for-the-badge&logo=three.js&logoColor=white)
-![ReactThreeFiber](https://img.shields.io/badge/R3F-black.svg?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQyMl8zNSkiPgo8cmVjdCB4PSIxNyIgd2lkdGg9IjMxIiBoZWlnaHQ9IjE0IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIzNCIgeT0iMTQiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNyIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeD0iMTciIHk9IjE3IiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHk9IjE3IiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjE3IiB5PSIzNCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzQyMl8zNSI+CjxyZWN0IHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4=&style=for-the-badge)
-
-### | Test
-
-![Static Badge](https://img.shields.io/badge/jest-%23944058?style=for-the-badge&logo=jest)
+<div align="center">
+  <div style="display: inline-block; text-align: center;">
+    <img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMjYg/MDAxNzIzMDQ5NjcxODQ1.3atsyiwdCGS1HNGS1FFt65Q7nTwzkZnSQVtUivuEjDQg.Mp9B4pi4FxJEgFq18AuyVHAY5Rzi8vph9vBGbbDaWtwg.GIF/3.gif?type=w3840" width="250px">
+    <br>
+    <span>스테이지 2 플레이 화면</span>
+  </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <div style="display: inline-block; text-align: center;">
+    <img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMTY2/MDAxNzIzMDQ5NjcxNTE1.-IsUf4o8yExqROpqtRmgtlV1X8FyWkTTu_rkAdwuxBYg.CG_Uk3_D6mRXVAi3dMQCcG2Hpng7xnkPJZgXqBeMQDog.GIF/1.gif?type=w3840" width="250px">
+    <br>
+    <span>게임 종료 화면</span>
+  </div>
+</div>
 <br><br><br>
 
-# 🤔 Why Expo?
+# Menu
+
+- [🎮 Tutorial](#-tutorial-개발-도구)
+  - [Expo를 선택한 이유](#expo를-선택한-이유)
+- [🎮 Stage 0](#-stage-0-프로젝트의-시작)
+  - [1. 센서를 활용해 보자](#1-센서를-활용해-보자)
+  - [2. 물리를 직접 구현하자](#2-물리를-직접-구현하자)
+  - [3. 3D로 만들자](#3-3d로-만들자)
+- [🎮 Stage 1](#-stage-1-센서의-활용과-물리-법칙)
+  - [공의 이동과 물리 법칙](#공의-이동과-물리-법칙)
+    - [1. 어떻게 공을 이동하게 만들까?](#1-어떻게-공을-이동하게-만들까)
+    - [2. 공의 회전 방향을 어떻게 설정할까?](#2-공의-회전-방향을-어떻게-설정할까)
+    - [3. 물리 법칙 어떻게 만들까?](#3-물리-법칙-어떻게-만들까)
+  - [센서 데이터 인식의 차이](#센서-데이터-인식의-차이)
+- [🎮 Stage 2](#-stage-2-그래픽)
+  - [공의 이동에 따른 실시간 텍스처를 변형](#공의-이동에-따른-실시간-텍스처를-변형)
+    - [1. 셰이더란 무엇이며, 어떻게 활용할 수 있을까?](#1-셰이더란-무엇이며-어떻게-활용할-수-있을까)
+    - [2. Vertex Shader는 좌표를 변환하고 Fragment Shader는 그림을 그린다](#2-vertex-shader는-좌표를-변환하고-fragment-shader는-그림을-그린다)
+- [👾 Final Stage](#-final-stage-최적화)
+  - [컴포넌트 분리를 통한 최적화](#컴포넌트-분리를-통한-최적화) - [1. Ball 컴포넌트가 수행하는 일이 너무 많다](#1-ball-컴포넌트가-수행하는-일이-너무-많다) - [2. ModelLoader 컴포넌트의 관심사 분리](#2-modelloader-컴포넌트의-관심사-분리) - [3. 컴포넌트 분리를 완료한 이후의 성능 확인](#3-컴포넌트-분리를-완료한-이후의-성능-확인)
+- [💭 Memoir](#-memoir)
+- [🛠 Tech Stack](#-tech-stack)
+  </br><br><br><br>
+
+# 🎮 Tutorial, 개발 도구
+
+## Expo를 선택한 이유
 
 Expo는 React Native를 사용한 개발에 도움이 되는 다양한 기능을 지원하는 프레임워크입니다.<br>
 
@@ -59,42 +108,9 @@ Expo의 실시간 리로딩 기능은 개발을 편리하게 만들 수 있다�
 Expo Go 앱을 통해 실제 디바이스에서 즉시 테스트할 수 있어, 센서 기반의 게임플레이를 실시간으로 확인하고 조정할 수 있다는 장점도 존재했습니다.
 
 프로젝트 진행 기간이 짧았고, React Native로 앱을 개발하는데 있어 많은 도구를 제공해주는 Expo를 사용하여 개발을 진행하였습니다.
-<br><br><br>
+</br><br><br><br>
 
-# Contents
-
-- [🧲 Motivation](#-motivation)
-  - [(1) 센서를 활용해 보자](#1-센서를-활용해-보자)
-  - [(2) 물리를 직접 구현하자](#2-물리를-직접-구현하자)
-  - [(3) 3D로 만들자](#3-3d로-만들자)
-- [📱 Preview](#-preview)
-- [🔥 Challenge](#-challenge)
-  - [공의 이동과 물리 법칙](#공의-이동과-물리-법칙)
-    - [1. 어떻게 공을 이동하게 만들까](#1-어떻게-공을-이동하게-만들까)
-      - [1-1. 가속도 센서 데이터 수집](#1-가속도-센서-데이터-수집)
-      - [1-2. 공의 가속도 계산](#2-공의-가속도-계산)
-      - [1-3. 공의 속도 업데이트](#3-공의-속도-업데이트)
-      - [1-4. 공의 위치 업데이트](#4-공의-위치-업데이트)
-    - [2. 공의 회전 방향을 어떻게 설정할까](#2-공의-회전-방향을-어떻게-설정할까)
-      - [1-1. 공의 이동 방향 계산](#1-공의-이동-방향-계산)
-      - [1-2. 공의 회전 축 결정](#2-공의-회전-축-결정)
-  - [물리 법칙 어떻게 만들까](#3-물리-법칙-어떻게-만들까)
-  - [센서 데이터 인식의 차이](#센서-데이터-인식의-차이)
-  - [공의 이동에 따른 실시간 텍스처를 변형](#공의-이동에-따른-실시간-텍스처를-변형)
-    - [1. 셰이더란 무엇이며 어떻게 활용할 수 있을까](#1-셰이더란-무엇이며-어떻게-활용할-수-있을까)
-    - [2. Vertex Shader는 좌표를 변환하고 Fragment Shader는 그림을 그린다](#2-vertex-shader는-좌표를-변환하고-fragment-shader는-그림을-그린다)
-  - [컴포넌트 분리를 통한 최적화](#컴포넌트-분리를-통한-최적화)
-    - [1. Ball 컴포넌트가 수행하는 일이 너무 많다](#1-ball-컴포넌트가-수행하는-일이-너무-많다)
-    - [2. Modelloader 컴포넌트의 관심사 분리](#2-modelloader-컴포넌트의-관심사-분리)
-    - [3. 컴포넌트 분리를 완료한 이후의 성능 확인](#3-컴포넌트-분리를-완료한-이후의-성능-확인)
-- [🗓️ Schedule](#️-schedule)
-- [💭 Memoir](#-memoir)
-
-  - [이도건](#이도건)
-  - [강유진](#강유진)
-    <br><br><br>
-
-# 🧲 Motivation
+# 🎮 Stage 0, 프로젝트의 시작
 
 저희 RollingArt 프로젝트는 스마트폰의 센서를 실시간으로 받아오고 처리해서 메인 로직을 구성해 보자는 목표에서 출발했습니다.
 
@@ -116,21 +132,9 @@ JavaScript로 물리 엔진을 직접 구현하여 기울기에 따른 구의 �
 <br>
 
 팀원 모두가 모바일 앱 프로젝트는 처음이었기 때문에 웹에서는 경험해보지 못한 새로운 챌린지가 있을 것으로 생각했습니다.
-<br><br><br>
+</br><br><br><br>
 
-# 📱 Preview
-
-<br>
-<p align="center">
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMjU0/MDAxNzIzMDQ5MTQ1NzAy.ApOh7xvgSZf2J7R_PopxAUSB-loPkoP1vG07pUc1nFQg.hdOlfOV09jy_76MhLk64by-RIwOXm1Iy1SBKB7gcFNgg.GIF/4.gif?type=w3840" width="250px">&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMTIx/MDAxNzIzMDQ5NjcxNjg5.-pPTo3kBSrf8vQnM6XWgsaMSF1Tp7JFSS_48JgAvmAAg.KnzaQvJ4vaPUNptRivK_7_X9R0OCepG_mwDYlV_q7YUg.GIF/5.gif?type=w3840" width="250px">&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMTMz/MDAxNzIzMDQ5NjcxNjM2.rhV63jY_He9KJbgazh0Q5C_BPZRrzcG-UITQU7yqadIg.O6pXSODl37BLoCblmFqjZjqtYRUcQUdqntjqaZDa3L0g.GIF/2.gif?type=w3840" width="250px">&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMjYg/MDAxNzIzMDQ5NjcxODQ1.3atsyiwdCGS1HNGS1FFt65Q7nTwzkZnSQVtUivuEjDQg.Mp9B4pi4FxJEgFq18AuyVHAY5Rzi8vph9vBGbbDaWtwg.GIF/3.gif?type=w3840" width="250px">&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMTY2/MDAxNzIzMDQ5NjcxNTE1.-IsUf4o8yExqROpqtRmgtlV1X8FyWkTTu_rkAdwuxBYg.CG_Uk3_D6mRXVAi3dMQCcG2Hpng7xnkPJZgXqBeMQDog.GIF/1.gif?type=w3840" width="250px">
-</p>
-<br><br><br>
-
-# 🔥 Challenge
+# 🎮 Stage 1, 센서의 활용과 물리 법칙
 
 ## 공의 이동과 물리 법칙
 
@@ -143,71 +147,26 @@ JavaScript로 물리 엔진을 직접 구현하여 기울기에 따른 구의 �
 </p>
 가속도계 센서는 스마트폰을 앞, 뒤, 좌, 우로 기울기가 인식되는 센서를 말합니다.
 
-#### 1. 가속도 센서 데이터 수집<br>
-
-```
-const [accelData, setAccelData] = useState({ x: 0, y: 0, z: 0 });
-
-let accelLastUpdate = Date.now();
-    Accelerometer.setUpdateInterval(300);
-    const accelSubscription = Accelerometer.addListener((result) => {
-      const now = Date.now();
-      if (now - accelLastUpdate >= 300) {
-        const normalizedData = normalizeSensorData(result, "accelerometer");
-        if (
-          initialTilt.current.x === 0 &&
-          initialTilt.current.y === 0 &&
-          initialTilt.current.z === 0
-        ) {
-          initialTilt.current = normalizedData;
-        }
-        setAccelData(normalizedData);
-        accelLastUpdate = now;
-      }
-    });
-```
+1. 가속도 센서 데이터 수집<br>
 
 - 처음 스테이지에 접속했을 때 기울기의 값이 0으로 지정됩니다.
 - 사용자가 스마트폰을 기울이면, 기기의 가속도 센서가 이 움직임을 감지하고 데이터로 변환합니다.
   <br><br>
 
-#### 2. 공의 가속도 계산
-
-```
-const adjustedX = accelData.x - initialTilt.current.x;
-const adjustedY = -(accelData.y - initialTilt.current.y);
-
-const extraTiltX = adjustedX * 4;
-const extraTiltY = adjustedY * 4;
-```
+2. 공의 가속도 계산
 
 - 초기 기울기를 기준으로 스마트 폰의 기울기를 통해 공의 가속도를 계산합니다.
   <br><br>
 
-#### 3. 공의 속도 업데이트
-
-```
-useFrame((state, delta) => {
-  velocity.current.x += (extraTiltX + landSlopeX) * delta * (sensitiveCount + 3);
-  velocity.current.z += (extraTiltY + landSlopeZ) * delta * (sensitiveCount + 3);
-  velocity.current.y = 1;
-});
-```
+3. 공의 속도 업데이트
 
 - 계산된 공의 가속도를 바탕으로 공의 속도를 계산합니다.
   <br><br>
 
-#### 4. 공의 위치 업데이트
-
-```
-useFrame((state, delta) => {
-  position.current.x += velocity.current.x * delta * 2;
-  position.current.z += velocity.current.z * delta * 2;
-  position.current.y += velocity.current.y * delta * 2;
-});
-```
+4. 공의 위치 업데이트
 
 - 계산된 공의 속도를 바탕으로 공의 위치를 업데이트 합니다.
+  <br><br>
 
 공의 속도와 위치를 계산할 때 `ReactThreeFiber`에 존재하는 메서드인 `useFrame`을 사용합니다.<br>
 
@@ -233,13 +192,9 @@ useFrame((state, delta) => {
 
 #### 1. 공의 이동 방향 계산
 
-```
+```js
 useFrame((_, delta) => {
-  const moveDirection = new THREE.Vector3(
-    velocity.current.x,
-    0,
-    velocity.current.z
-  ).normalize();
+  const moveDirection = new THREE.Vector3(velocity.current.x, 0, velocity.current.z).normalize();
 });
 ```
 
@@ -248,7 +203,7 @@ useFrame((_, delta) => {
 
 #### 2. 공의 회전 축 결정
 
-```
+```js
 useFrame((_, delta) => {
   const rotationAxis = new THREE.Vector3()
     .crossVectors(new THREE.Vector3(0, 1, 0), moveDirection)
@@ -261,6 +216,7 @@ useFrame((_, delta) => {
 <img src="https://postfiles.pstatic.net/MjAyNDA4MDdfOCAg/MDAxNzIzMDIzNTAyOTA1.IYQHxvyZuQEPGeeFk-2SZFIUWtXtnxJ5qrWS8BJ-O80g.VL1WLu-rWekB0pOalCJDTAqpArfnfn7LZjHSriQt7Xgg.GIF/%EA%B3%B5%EC%9D%98_%ED%9A%8C%EC%A0%84.gif?type=w3840" width="253px">
 </p>
 그 결과 공이 어느 방향으로 이동해도 이동 방향에 맞춰 공이 회전하는 축이 자연스럽게 설정되는 것을 볼수 있었습니다.
+<br><br>
 
 ### 3. 물리 법칙 어떻게 만들까?
 
@@ -278,7 +234,7 @@ useFrame((_, delta) => {
 </p>
 보이지 않는 광선을 발사하여 광선이 맞닿는 부분을 인식하는 Three.js의 메서드 입니다.<br>
 
-```
+```js
 const raycaster = useRef(new THREE.Raycaster());
 
 raycaster.current.set(
@@ -287,14 +243,16 @@ raycaster.current.set(
 );
 ```
 
+<br>
+
 <p align="center">
 <img src="https://postfiles.pstatic.net/MjAyNDA4MDdfMjE2/MDAxNzIzMDMyMTIxMDA5.3gU7d2UZiem97mJlB4jqdU--PpC6XdEMi76wWOtXSMIg.HBoqApto4EsEUeLH-sNlYtB5YOIP2RxCO5UZp2X4tEEg.GIF/%EB%A0%88%EC%9D%B4%EC%BA%90%EC%8A%A4%ED%84%B0.gif?type=w3840" width="500px">
 </p>
-<br><br>
+<br>
 
 `Raycaster`의 방향을 지정하여 광선이 땅과 교차되는 지점을 바닥으로 인식하게 했지만, 공에 중력이 적용되어야 공이 바닥에 맞닿아 있을 수 있기 때문에 중력 값을 임의로 지정했습니다.
 
-```
+```js
 const gravity = -9.8;
 velocity.current.y += gravity * delta;
 ```
@@ -308,20 +266,38 @@ velocity.current.y += gravity * delta;
 
 <p align="center">
 <img src="https://postfiles.pstatic.net/MjAyNDA4MDdfMjk0/MDAxNzIzMDM0NTg1MDQz.NdpB2tnJ1xI74a3Eu7f4U7NxNKNnXFg-tTtxTzBz4i0g.ebokcv3H_KNLSQsQP9MWWHYrpzMj1LFWuMCK59DJgpcg.PNG/image.png?type=w3840" width="300px">
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDdfMjcx/MDAxNzIzMDM1NDU3ODYw.1zy7DwnSgPi3cSUWgzKKir6f5bNDgqJLlsz8QTsNFKAg.-Ynvmt8V6ATxem6PI9jgWm-rwEF1JfvA3ngDmdxMSBIg.PNG/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7_2024-08-07_215706.png?type=w773" width="428px"><br>
+<img src="https://postfiles.pstatic.net/MjAyNDA4MTVfOTkg/MDAxNzIzNzA3NDc5Mzcz.y5fZGcYRv1bWShr_4zk-op0qMxlPXNsnOlrZrw5puhEg.niOyLhn25eQ7pOtupRF3qD7-alZ1c3u5X8t-wSV3hasg.PNG/image.png?type=w773" width="401.6px"><br>
 <br>
 </p>
 원인은 플랫폼에서 오는 센서의 인식 값에 차이에서 비롯된 것이었습니다.<br>
-`Android`는 +로 인식하는 것을 `iOS`는 -로 인식하고 있었고, 반대로 공이 이동하는 것을 해결하기 위해 조건문을 사용하여 iOS와 Android의 센서 인식값을 다르게 설정했습니다.
+`iOS`는 +로 인식하는 것을 `Android`는 -로 인식하고 있었고, 반대로 공이 이동하는 것을 해결하기 위해 조건문을 사용하여 iOS와 Android의 센서 인식값을 다르게 설정했습니다.
 <br><br>
-<p align="center">
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDdfMTA0/MDAxNzIzMDM0NTg5MzU2.3yMTEyAXVFWwRYRSz9Wb8AHyJ4-HJ__t-7SWjl5I0Rsg.XMybKZalWdnLJTfSz2A2nnQkVnaB16OPT2BAdlYsOswg.PNG/image.png?type=w3840" width="350px"><br>
-</p>
+
+```js
+function normalizeSensorData(data) {
+  if (Platform.OS === "android") {
+    return {
+      x: -data.x,
+      y: -data.y,
+      z: data.z,
+    };
+  }
+  if (Platform.OS === "ios") {
+    return data;
+  }
+  return data;
+}
+```
+
 그 결과 `Android`와 `iOS`에서의 공의 이동 방향이 모두 일치하는 것을 확인할 수 있었습니다.
+</br><br><br><br>
+
+# 🎮 Stage 2, 그래픽
 
 ## 공의 이동에 따른 실시간 텍스처를 변형
 
 공이 이동할 때마다 바닥에 그림을 그리는 것처럼 보이게 하기 위해서는 바닥 텍스처에 대한 실시간 변형이 이루어져야 했습니다. 이렇듯 실시간 그래픽 처리를 위한 기술로써 셰이더(Shader)를 활용해볼 수 있었습니다.
+<br><br>
 
 ### 1. 셰이더란 무엇이며, 어떻게 활용할 수 있을까?
 
@@ -346,7 +322,7 @@ Vertex Shader는 이러한 정점에 대한 변형 동작을 수행하며, 각 �
 <br><br>
 Vertex Shader는 정점 단위로, Fragment Shader는 픽셀 단위로 연산을 수행한다고 정리해볼 수 있겠습니다.
 
-### 2. Vertex Shader는 좌표를 변환하고 Fragment Shader는 그림을 그린다.
+### 2. Vertex Shader는 좌표를 변환하고 Fragment Shader는 그림을 그린다
 
 사용자의 조작으로 인해 공의 위치가 변화하면, '공이 어디에 위치해 있는지'에 대한 좌표 값을 Vertex Shader에 전달합니다.
 이제 Vertex Shader의 역할은 Fragment Shader에서의 연산을 위해 '공의 정확한 위치를 계산'하는 것입니다.<br>
@@ -376,7 +352,9 @@ Fragment Shader는 각 픽셀에 따른 연산을 담당하기 때문에, 화면
 </p>
 <br>
 좌표 간 변환이 정확하게 이루어졌을 때 공의 정확한 이동 경로에 텍스처 변형을 가할 수 있었습니다.
-</br>
+</br><br><br><br>
+
+# 👾 Final Stage, 최적화
 
 ## 컴포넌트 분리를 통한 최적화
 
@@ -396,31 +374,34 @@ Rolling Art에서는 두 가지 주요한 로직이 실시간으로 이루어집
 그러나 이러한 해결책은 저희 프로젝트에 적절하지 않았습니다. 스마트폰의 스레드를 활용하기 위해서는 필요한 연산에 대해 네이티브 코드를 각각 작성해야 합니다. 이는 '하나의 JavaScript 코드로 iOS와 Android 양쪽에 대응'하고자 했던 저희의 최초 목표에서 벗어나는 일이었습니다.
 <br>
 우선 JavaScript 코드 안에서 최적화를 시도할 것을 결정한 뒤 코드를 돌아보니 커다란 개선점이 보였습니다.
-<br>
+<br><br>
 
-### 1. Ball 컴포넌트가 수행하는 일이 너무 많다.
+### 1. Ball 컴포넌트가 수행하는 일이 너무 많다
 
 <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDdfMjI1/MDAxNzIzMDM4OTU2MjU4.-t-aZJXfPXL2cM39AC7bKdn97FNzvPRu2Q5-swkpDJkg.E6Dn2uN2S1y9SVFkHwjEu7rLcJkzDUXrAwSp_thkNo0g.PNG/%EB%B3%BC1.png?type=w966" width="150px">&nbsp;&nbsp;&nbsp;
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDdfMjY3/MDAxNzIzMDM4OTU2MTI3.JgOVT9vuxVXAKO_5AeyFd7a6VwbZ62cTi_l6T3op4R0g.H7DHAFjUQ8R_7_fj4m24LuTxhSgWo8vSb9RSq0Xj_eIg.PNG/%EB%B3%BC2.png?type=w966" width="150px">&nbsp;&nbsp;&nbsp;
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDdfMjY1/MDAxNzIzMDM4OTU2NDA2.RyJ27WZi0RjpJ4V-u2ns9zJ7EXYtbNEM8jthCoFE2_sg.JrzuaEijPTL9D6FGEPLOQCrLERQ2DwN30s0oTTyLbp8g.PNG/%EB%B3%BC3.png?type=w966" width="150px">&nbsp;&nbsp;&nbsp;
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDdfMjI0/MDAxNzIzMDM5MjE2ODQy.UEGM1Oc5v95_qL_ssQAGU7fdpgtGK4Tzx1GK9rRLqVAg.7EF5cETExEs0KC_f7Xd8SVUjH_o7PG6RMY2AhNgoyGog.PNG/%EB%B3%BC4.png?type=w966" width="150px">
+<img src="https://postfiles.pstatic.net/MjAyNDA4MTVfODAg/MDAxNzIzNzEzNTY2NTA3.7m8t3DSMvJT6ivw_qWrhyXH5oJHB5ZFFwq2bJJ21w38g.nIlsiVGSOVsPXAo68KwLE3UBlrr5Ln9QO4_7RdwSLBsg.PNG/1.png?type=w966" width="150px">&nbsp;&nbsp;&nbsp;
+<img src="https://postfiles.pstatic.net/MjAyNDA4MTVfMTcg/MDAxNzIzNzEzNTY2NDg1.kPIj7OW94rgQxx_Hk1xFUreHXCwxjr7WPtg8jpUgO1wg.MnqEwXO9AaDyG2tQZ0CHlhn73I5t2b6677eTyNsKYrog.PNG/2.png?type=w966" width="150px">&nbsp;&nbsp;&nbsp;
+<img src="https://postfiles.pstatic.net/MjAyNDA4MTVfNyAg/MDAxNzIzNzEzNTY2NTEz.I_lVdoBJL55Q4LMaXxT8ohVOE9oz-cvLKkzkFlnF24Ug.2EkB7R2zl8_ZKGNaQnFFcCqcAQmzharmF8-2l8k0Ai4g.PNG/3.png?type=w966" width="150px">&nbsp;&nbsp;&nbsp;
+<img src="https://postfiles.pstatic.net/MjAyNDA4MTVfMTg2/MDAxNzIzNzEzNTY2NDg0.J1YP4kqlt9jlRMpqk-Mpg18zWpzuhxkE2GkcwmqpeyAg.zMW9AJbdfJk4ZcdQlULw9q9mk73DRAyVu0C9hAYXdcog.PNG/4.png?type=w966" width="150px">
 </div>
+<br>
 
-최적화 작업이 이루어지기 전의 Ball 컴포넌트입니다. <br> 하나의 Ball 컴포넌트가 물리에 대한 연산과 동적 텍스처 변형을 모두 수행하고 있었습니다. Ball 컴포넌트가 순수하게 이동에 관한 로직만 수행한다고 했을 때, 붉은 색으로 표시한 코드만이 남아있어야 합니다. 공 컴포넌트에 대한 로직 분리를 진행, 실시간 텍스처에 대한 연산은 별도의 함수로 분리해주었습니다.
+최적화 작업이 이루어지기 전의 Ball 컴포넌트입니다. <br> 하나의 Ball 컴포넌트가 물리에 대한 연산과 동적 텍스처 변형을 모두 수행하고 있었습니다. Ball 컴포넌트가 순수하게 이동에 관한 로직만 수행한다고 했을 때, 푸른 색으로 표시한 코드만이 남아있어야 합니다. 공 컴포넌트에 대한 로직 분리를 진행, 실시간 텍스처에 대한 연산은 별도의 함수로 분리해주었습니다.
+<br><br>
 
 ### 2. ModelLoader 컴포넌트의 관심사 분리
 
 <br>
 <p align="center">
-<img src="https://postfiles.pstatic.net/MjAyNDA4MDdfMzgg/MDAxNzIzMDM2MDE1MzY2.J-3ctICz6H3P_Uv1ojO0cIon5UiLQstLY4CpwSrO134g.P5Al3an9EM4AyqL-XDABOGcO4KkWdxQz4AQY-epOVx0g.PNG/%EA%B4%80%EC%8B%AC%EC%82%AC.png?type=w966" width="300px">
+<img src="https://postfiles.pstatic.net/MjAyNDA4MTVfMTM1/MDAxNzIzNzEzNzAzOTg3.3VAgvb25OQPj353ZusbiTE2aOyOLvnPhytHEzOPDs0Eg.laPM5e_hl4lhBXewqSLFzY_r9eZfLR97BQ1tgcg1Tkwg.PNG/%EA%B4%80%EC%8B%AC%EC%82%AC.png?type=w966" width="300px">
 </p>
 
 ModelLoader 컴포넌트는 본래 말그대로 3D 모델링 파일을 읽어들이는 역할을 수행하고 있었습니다.
 문제는 실시간 텍스처 변형을 구현하는 과정에서 ModelLoader 컴포넌트에서 공에 셰이더를 적용하는 역할이 추가된 데 있었습니다. <br>
 때문에 3D 모델링을 불러오는 모든 컴포넌트에서 불필요하게 공의 셰이더에 관련한 코드를 읽어들이고 있는 상황이었습니다.<br>
-ModelLoader 본래 역할에 맞게 붉은 색으로 표시한 코드만을 수행해야하며, 다른 코드는 분리하는 것이 적절했습니다.
-<br>
+ModelLoader 본래 역할에 맞게 푸른 색으로 표시한 코드만을 수행해야합니다.<br>
+붉은 색은 셰이더 관련 코드이며, 이와 같이 관련 없는 코드는 분리하는 것이 적절했습니다.
+<br><br>
 
 ### 3. 컴포넌트 분리를 완료한 이후의 성능 확인
 
@@ -428,51 +409,7 @@ ModelLoader 본래 역할에 맞게 붉은 색으로 표시한 코드만을 수�
 <img src="https://postfiles.pstatic.net/MjAyNDA4MDhfMjY5/MDAxNzIzMDk4MTc3MjUw.Fzv2j7Ah4UHg8I4x9k96LgL4EoxRC_lmwvbiHuokidYg.4AvzmpU0PlRpTAA5IjALJjr98mT1tfgMS8cqJ9rY2z4g.GIF/%EC%B5%9C%EC%A2%85_%EB%B9%8C%EB%93%9C_(online-video-cutter.com)_(1)_(1).gif?type=w3840" width="250px">
 </p>
 위와 같이 각 컴포넌트가 수행할 역할을 확실히 정하고 기능을 분리했을 때 성능이 향상됨을 확인할 수 있었습니다.
-<br><br><br>
-
-# 🗓️ Schedule
-프로젝트 진행 기간<br>
-2024.06.10 ~ 2024.07.03
-
-1주차
-  - 아이디어 구상 및 기획
-  - 프로젝트 세팅
-  - 메인화면 정적 UI 구현
-  - 3D 환경 세팅
-  - 스테이지 선택 화면 정적 UI 구현
-<br><br>
-
-2주차
-  - 에셋 임포트 및 세팅
-  - 로딩화면 정적 UI 구현
-  - 메인, 스테이지 선택 화면 라우팅
-  - 게임 화면 정적 UI 구현
-  - 메인, 로딩 화면에 3D Scene 연결
-  - 공의 이동 구현
-  - 이동 경로 좌표값 수집 및 데이터화, 이동 최적화
-  - 스테이지 1 mesh 제작
-  - 공의 충돌과 추락 구현
-  - 가속도, 관성, 마찰력 물리 법칙 구현
-<br><br>
-
-3주차
-  - 메인 화면과 로딩 화면에서 사용하는 볼 컴포넌트 분리
-  - Start, Finish 이벤트 발생과 타이머 구현
-  - 스테이지 1 리소스 완성 및 배치, collider 구현
-  - 일시 정지 및 재개 구현
-  - 게임 결과 모달 기능 구현
-  - 동적 텍스처 변형 구현(그래픽 처리)
-  - 스테이지 선택 화면 활성화, 비활성화 구현
-  - 민감도 설정 구현
-  - 튜토리얼 스테이지 리소스 제작 및 배치
-  - 게임 설명 및 도전과제 안내 모달
-  - 사운드 구현
-  - 스테이지 1 리소스 수정, 스테이지 2 리소스 완성 및 배치
-  - Ball 컴포넌트 최적화
-  - 경로 일치율 알고리즘 구현
-  - 로딩 구현 및 카메라 조정
-  - 앱 종료 구현
-<br><br><br>
+<br><br><br><br>
 
 # 💭 Memoir
 
@@ -489,3 +426,21 @@ ModelLoader 본래 역할에 맞게 붉은 색으로 표시한 코드만을 수�
 처음 겪어보는 것 투성이에 어려움이 많았지만 그만큼 배우고 성장할 수 있는 기회가 되었던 거 같습니다. <br>물리엔진의 구현에 대해 걱정이 많았는데 다행히도 팀 프로젝트여서 무사히 해낼 수 있었다고 생각합니다.<br>
 구현 과정 중에서도 '최적화'에 대한 것이 특히 기억에 남습니다. 컴포넌트 관심사 분리의 중요성에 대해서는 익히 들었지만 그간 '중요하다.'라고 개념적으로만 알고 실감하지는 못했던 거 같습니다. 최적화 과정을 겪으며 직접 그 중요성에 대해 체감하고 개선점을 눈으로 확인할 수 있어 좋았습니다.<br>
 RollingArt 프로젝트를 통해 여러 귀중한 경험을 할 수 있었던 거 같아 만족스럽습니다. 경험을 거름삼아 더 나은 개발자로 성장하고 싶습니다!
+<br><br><br><br>
+
+# 🛠 Tech Stack
+
+### | Frontend
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
+![ReactNative](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Expo](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)
+
+### | 3D
+
+![Static Badge](https://img.shields.io/badge/ThreeJs-black?style=for-the-badge&logo=three.js&logoColor=white)
+![ReactThreeFiber](https://img.shields.io/badge/R3F-black.svg?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4IiBmaWxsPSJub25lIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzQyMl8zNSkiPgo8cmVjdCB4PSIxNyIgd2lkdGg9IjMxIiBoZWlnaHQ9IjE0IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIzNCIgeT0iMTQiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNyIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeD0iMTciIHk9IjE3IiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHk9IjE3IiB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjE3IiB5PSIzNCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzQyMl8zNSI+CjxyZWN0IHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4=&style=for-the-badge)
+
+### | Test
+
+![Static Badge](https://img.shields.io/badge/jest-%23944058?style=for-the-badge&logo=jest)
