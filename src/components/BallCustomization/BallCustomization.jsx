@@ -31,15 +31,15 @@ export default function BallCustomization() {
   return (
     <View style={styles.rowWrapper}>
       <TouchableOpacity onPress={handlePrevPattern}>
-        <Image style={styles.arrowImage} source={arrowButtonImage} />
+        <Image style={styles.arrowImage} source={arrowButtonImage} testID="arrow-button" />
       </TouchableOpacity>
       <View style={styles.circleContainer}>
         <Image style={styles.circleImage} source={circleImage} />
-        <View style={styles.ballContainer}>
+        <View style={styles.ballContainer} testID="ball-container">
           <Canvas style={styles.canvasContainer}>
             <ambientLight />
             <directionalLight position={[10, 10, 10]} intensity={1} castShadow />
-            <StaticBall currentBallPatternTexture={patterns[patternIndex]} />
+            <StaticBall currentBallPatternTexture={patterns[patternIndex]} testID="static-ball" />
           </Canvas>
         </View>
       </View>
@@ -47,6 +47,7 @@ export default function BallCustomization() {
         <Image
           style={[styles.arrowImage, { transform: [{ scaleX: -1 }] }]}
           source={arrowButtonImage}
+          testID="arrow-button"
         />
       </TouchableOpacity>
     </View>
