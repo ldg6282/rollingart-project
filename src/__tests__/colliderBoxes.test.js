@@ -1,11 +1,11 @@
 import colliderBoxes from "../utils/colliderBoxes";
 
 describe("colliderBoxes", () => {
-  it("should have the correct number of collider boxes", () => {
+  it("collider boxes가 올바른 수만큼 존재해야 한다.", () => {
     expect(colliderBoxes).toHaveLength(5);
   });
 
-  it("should have correct properties for each collider box", () => {
+  it("각 collider boxes마다 올바른 속성을 가지고 있어야 한다.", () => {
     colliderBoxes.forEach((box) => {
       expect(box).toHaveProperty("id");
       expect(box).toHaveProperty("size");
@@ -17,7 +17,7 @@ describe("colliderBoxes", () => {
     });
   });
 
-  it("should have correct values for the first collider box", () => {
+  it("첫 번째 collider box가 올바른 값을 가지고 있어야 한다.", () => {
     const firstBox = colliderBoxes[0];
     expect(firstBox.id).toBe("collider1");
     expect(firstBox.size).toEqual([70, 50, 5]);

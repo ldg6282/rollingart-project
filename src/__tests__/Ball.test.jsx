@@ -48,7 +48,7 @@ jest.mock("three", () => {
   };
 });
 
-describe("Ball Component", () => {
+describe("Ball 컴포넌트", () => {
   let mockProps;
   let mockBallMeshRef;
 
@@ -87,20 +87,18 @@ describe("Ball Component", () => {
     jest.clearAllMocks();
   });
 
-  it("renders correctly", () => {
+  it("컴포넌트가 올바르게 렌더링되어야 한다.", () => {
     const { toJSON } = render(<Ball {...mockProps} />);
     expect(toJSON()).toMatchSnapshot();
   });
 
-  it("calls setIsBallLoaded when ballMeshRef is set", async () => {
+  it("ballMeshRef가 준비되었을 때  setIsBallLoaded가 호출되어야 한다.", async () => {
     const setIsBallLoaded = jest.fn();
     mockProps.setIsBallLoaded = setIsBallLoaded;
 
-    // 초기 render에서는 ballMeshRef.current가 null이므로 setIsBallLoaded가 호출되지 않아야 합니다.
     const { rerender } = render(<Ball {...mockProps} />);
     expect(setIsBallLoaded).not.toHaveBeenCalled();
 
-    // 이후에 ballMeshRef를 설정하여 다시 렌더링할 때 setIsBallLoaded가 호출됩니다.
     act(() => {
       mockBallMeshRef.current = {
         quaternion: new THREE.Quaternion(),

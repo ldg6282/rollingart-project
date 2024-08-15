@@ -7,7 +7,7 @@ jest.mock("react-native-expo-viewport-units", () => ({
   vw: jest.fn(() => 10),
 }));
 
-describe("ConfirmationModal", () => {
+describe("ConfirmationModal 컴포넌트", () => {
   const mockLeftButtonTouch = jest.fn();
   const mockRightButtonTouch = jest.fn();
 
@@ -18,7 +18,7 @@ describe("ConfirmationModal", () => {
     onRightButtonTouch: mockRightButtonTouch,
   };
 
-  it("renders correctly", () => {
+  it("정확하게 렌더링되어야 한다.", () => {
     const { getByText, getAllByTestId } = render(<ConfirmationModal {...props} />);
 
     expect(getByText("Test message")).toBeTruthy();
@@ -28,7 +28,7 @@ describe("ConfirmationModal", () => {
     expect(buttons[1].props.buttonText).toBe("NO");
   });
 
-  it("calls onLeftButtonTouch when YES button is pressed", () => {
+  it("YES 버튼을 눌렀을 때  onLeftButtonTouch를 호출해야 한다.is pressed", () => {
     const { getAllByTestId } = render(<ConfirmationModal {...props} />);
 
     const buttons = getAllByTestId("CustomButton");
@@ -36,7 +36,7 @@ describe("ConfirmationModal", () => {
     expect(mockLeftButtonTouch).toHaveBeenCalled();
   });
 
-  it("calls onRightButtonTouch when NO button is pressed", () => {
+  it("NO 버튼을 눌렀을 때 onRightButtonTouch을 호출해야 한다", () => {
     const { getAllByTestId } = render(<ConfirmationModal {...props} />);
 
     const buttons = getAllByTestId("CustomButton");
@@ -44,7 +44,7 @@ describe("ConfirmationModal", () => {
     expect(mockRightButtonTouch).toHaveBeenCalled();
   });
 
-  it("is not visible when visible prop is false", () => {
+  it("visible이 false일 때에는 화면에 보이지 않는다.", () => {
     const { queryByText } = render(<ConfirmationModal {...props} visible={false} />);
 
     expect(queryByText("Test message")).toBeNull();

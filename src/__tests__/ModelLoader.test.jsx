@@ -43,7 +43,7 @@ describe("ModelLoader", () => {
     expect(mockOnLoad).toHaveBeenCalledWith(mockScene);
   });
 
-  it("should apply correct material to land and fence", () => {
+  it("land와 fence에 올바른 material을 적용시켜야 한다.", () => {
     const mockLandMesh = {
       isMesh: true,
       name: "land",

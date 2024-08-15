@@ -17,19 +17,19 @@ jest.mock("@react-native-async-storage/async-storage", () => ({
   setItem: jest.fn(),
 }));
 
-describe("BallCustomization Component", () => {
+describe("BallCustomization 컴포넌트", () => {
   afterEach(() => {
     cleanup();
     jest.clearAllMocks();
   });
 
-  it("renders correctly", () => {
+  it("컴포넌트가 올바르게 렌더링되어야 한다.", () => {
     const { getByTestId } = render(<BallCustomization />);
     const ballContainer = getByTestId("ball-container");
     expect(ballContainer).toBeTruthy();
   });
 
-  it("changes pattern when next and prev buttons are clicked", () => {
+  it("prev buttons을 클릭했을 때 다음 패턴으로 변경되어야 한다.", () => {
     const { getByTestId, getAllByTestId } = render(<BallCustomization />);
 
     const staticBall = getByTestId("static-ball");
@@ -46,7 +46,7 @@ describe("BallCustomization Component", () => {
     expect(AsyncStorage.setItem).toHaveBeenCalledWith("selectedPatternIndex", "0");
   });
 
-  it("saves the selected pattern index to AsyncStorage", () => {
+  it("AsyncStorage에 선택된 패턴의 index가 저장되어야 한다.", () => {
     const { getAllByTestId } = render(<BallCustomization />);
 
     const nextButton = getAllByTestId("arrow-button")[1];

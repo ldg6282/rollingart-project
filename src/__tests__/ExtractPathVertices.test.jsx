@@ -32,7 +32,7 @@ jest.mock("three", () => ({
 }));
 
 describe("ExtractPathVertices", () => {
-  it("should extract vertices from the correct path", () => {
+  it("올바른 경로에서는 버텍스 좌표를 수집해야 한다.", () => {
     const mockModel = {
       getObjectByName: jest.fn().mockReturnValue({
         name: "correctPath",
@@ -67,7 +67,7 @@ describe("ExtractPathVertices", () => {
     ]);
   });
 
-  it("should not extract vertices when there is no correct path", () => {
+  it("올바른 경로가 아닐 때에는 버텍스 좌표를 수집해서는 안 된다.", () => {
     const mockModel = {
       getObjectByName: jest.fn().mockReturnValue(null),
     };

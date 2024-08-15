@@ -40,23 +40,34 @@ export default function ChallengeModal({ currentStage, setIsPaused }) {
   return (
     <Modal visible={visible} transparent animationType="fade">
       <Pressable
+        testID="modal-background"
         onPress={() => {
           setVisible(false);
           setIsPaused(false);
         }}
         style={styles.modalBackGround}
       >
-        <Pressable onPress={() => {}} style={styles.modalView}>
-          <Text style={styles.titleText}>도전 과제</Text>
-          <View style={styles.descriptionView}>
-            <Text style={styles.descriptionText1}>{descriptionText1()}</Text>
-            <Text style={styles.descriptionText2}>{descriptionText2()}</Text>
-            <Text style={styles.descriptionText2}>{descriptionText3()}</Text>
+        <Pressable testID="modal-content" onPress={() => {}} style={styles.modalView}>
+          <Text testID="modal-title" style={styles.titleText}>
+            도전 과제
+          </Text>
+          <View testID="description-view" style={styles.descriptionView}>
+            <Text testID="description-text-1" style={styles.descriptionText1}>
+              {descriptionText1()}
+            </Text>
+            <Text testID="description-text-2" style={styles.descriptionText2}>
+              {descriptionText2()}
+            </Text>
+            <Text testID="description-text-3" style={styles.descriptionText2}>
+              {descriptionText3()}
+            </Text>
           </View>
-          <Text style={styles.descriptionText3}>
+          <Text testID="description-text-4" style={styles.descriptionText3}>
             위 도전과제를 하나 달성할 때마다 별이 하나 부여됩니다.
           </Text>
-          <Text style={styles.descriptionText4}>빈곳을 터치하면 안내 창이 사라집니다.</Text>
+          <Text testID="description-text-5" style={styles.descriptionText4}>
+            빈곳을 터치하면 안내 창이 사라집니다.
+          </Text>
         </Pressable>
       </Pressable>
     </Modal>

@@ -29,7 +29,7 @@ jest.mock("@react-three/fiber/native", () => ({
   }),
 }));
 
-describe("CameraController Component", () => {
+describe("CameraController 컴포넌트", () => {
   let followTarget;
   let setIsAnimating;
 
@@ -43,7 +43,7 @@ describe("CameraController Component", () => {
     jest.useRealTimers();
   });
 
-  it("initializes and starts the animation", () => {
+  it("애니메이션이 초기화되고 시작되어야 한다.", () => {
     render(
       <CameraController
         followTarget={followTarget}
@@ -59,7 +59,7 @@ describe("CameraController Component", () => {
     expect(setIsAnimating).toHaveBeenCalledWith(true);
   });
 
-  it("does not update camera position when isAnimating is true", () => {
+  it("isAnimating이 true일 때 카메라 위치가 업데이트 되어서는 안된다.", () => {
     render(
       <CameraController followTarget={followTarget} isAnimating setIsAnimating={setIsAnimating} />,
     );
@@ -71,7 +71,7 @@ describe("CameraController Component", () => {
 
     expect(followTarget.current.position.set).not.toHaveBeenCalled();
   });
-  it("handles null followTarget without error", () => {
+  it("오류 없이 followTarget을 처리해야 한다.", () => {
     expect(() => {
       render(
         <CameraController
@@ -82,7 +82,7 @@ describe("CameraController Component", () => {
       );
     }).not.toThrow();
   });
-  it("sets isAnimating to false after animation completes", () => {
+  it("애니메이션이 완료되면 isAnimating을 false로 설정해야 한다.", () => {
     jest.useFakeTimers();
     render(
       <CameraController

@@ -14,12 +14,12 @@ jest.mock("react-native", () => ({
 }));
 
 describe("useTimer", () => {
-  it("should initialize with the given time", () => {
+  it("주어진 시간으로 올바르게 초기화되어야 한다.", () => {
     const { result } = renderHook(() => useTimer(60));
     expect(result.current.timeLeft).toBe(60);
   });
 
-  it("should start the timer", () => {
+  it("타이머가 실행되어야 한다.", () => {
     const { result } = renderHook(() => useTimer(60));
     act(() => {
       result.current.startTimer();
@@ -31,7 +31,7 @@ describe("useTimer", () => {
     expect(result.current.timeLeft).toBe(59);
   });
 
-  it("should stop the timer", () => {
+  it("타이머가 멈출 수 있어야 한다.", () => {
     const { result } = renderHook(() => useTimer(60));
     act(() => {
       result.current.startTimer();
@@ -46,7 +46,7 @@ describe("useTimer", () => {
     expect(result.current.timeLeft).toBeLessThanOrEqual(timeLeft);
   });
 
-  it("should reset the timer", () => {
+  it("타이머의 리셋이 가능해야 한다.", () => {
     const { result } = renderHook(() => useTimer(60));
     act(() => {
       result.current.startTimer();
@@ -56,7 +56,7 @@ describe("useTimer", () => {
     expect(result.current.timeLeft).toBe(60);
   });
 
-  it("should handle app state changes", () => {
+  it("app state의 변화에 따라 타이머가 반응해야 한다.", () => {
     const { result } = renderHook(() => useTimer(60));
     act(() => {
       result.current.startTimer();

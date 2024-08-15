@@ -1,7 +1,7 @@
 import findGeometries from "../utils/findGeometries";
 
 describe("findGeometries", () => {
-  it("should find mesh and line objects", () => {
+  it("mesh와 line objects를 찾을 수 있어야 한다.", () => {
     const mockMesh = { isMesh: true };
     const mockLine = { isLine: true };
     const mockObject = {
@@ -15,7 +15,7 @@ describe("findGeometries", () => {
     expect(result).toContain(mockLine);
   });
 
-  it("should return an empty array for objects with no geometries", () => {
+  it("올바른 geometries가 없을 때에는 빈 배열을 반환해야 한다.", () => {
     const mockObject = {
       children: [{ children: [] }, { children: [{ children: [] }] }],
     };

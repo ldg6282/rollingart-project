@@ -30,7 +30,7 @@ describe("DynamicTextureApplier", () => {
     jest.clearAllMocks();
   });
 
-  it("should apply shader material to land mesh", () => {
+  it("land mesh에는 shader material이 적용되어야 한다.", () => {
     const mockLandMesh = {
       isMesh: true,
       name: "land",
@@ -55,7 +55,7 @@ describe("DynamicTextureApplier", () => {
     expect(mockLandMesh.material.needsUpdate).toBe(true);
   });
 
-  it("should not apply shader material to non-land meshes", () => {
+  it("land가 아닌 mesh에는 shader material이 적용되어선 안 된다.", () => {
     const mockNonLandMesh = {
       isMesh: true,
       name: "not-land",
@@ -78,7 +78,7 @@ describe("DynamicTextureApplier", () => {
     expect(mockNonLandMesh.material).not.toHaveProperty("uniforms");
   });
 
-  it("should update shader when props change", () => {
+  it("props이 바뀌면 shader가 업데이트 되어야 한다.", () => {
     const mockLandMesh = {
       isMesh: true,
       name: "land",

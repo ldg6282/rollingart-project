@@ -19,7 +19,7 @@ describe("getAssetUri", () => {
     expect(result).toBe(mockLocalUri);
   });
 
-  it("should throw an error if asset download fails", async () => {
+  it("에셋 다운로드에 실패하면 오류를 발생시켜야 한다.", async () => {
     const mockAssetPath = "path/to/asset";
 
     Asset.fromModule.mockReturnValue({

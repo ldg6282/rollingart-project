@@ -16,11 +16,13 @@ export default function ConfirmationModal({
           <Text style={styles.messageText}>{modalMessage}</Text>
           <View style={sharedStyles.rowWrapper}>
             <CustomButton
+              testID="CustomButton"
               containerStyle={styles.buttonContainer}
               buttonText="YES"
               onPress={onLeftButtonTouch}
             />
             <CustomButton
+              testID="CustomButton"
               containerStyle={styles.buttonContainer}
               buttonText="NO"
               onPress={onRightButtonTouch}

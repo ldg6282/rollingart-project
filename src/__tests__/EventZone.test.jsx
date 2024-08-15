@@ -16,7 +16,7 @@ jest.mock("@react-three/drei", () => {
   };
 });
 
-describe("EventZone", () => {
+describe("EventZone 컴포넌트", () => {
   const React = require("react");
 
   const defaultProps = {
@@ -27,13 +27,13 @@ describe("EventZone", () => {
     rotation: [0, 0, 0],
   };
 
-  it("renders correctly", () => {
+  it("정확하게 렌더링되어야 한다.", () => {
     const { getByTestId } = render(<EventZone {...defaultProps} />);
     const eventZone = getByTestId("event-zone");
     expect(eventZone).toBeTruthy();
   });
 
-  it("applies correct props", () => {
+  it("올바른 props이 적용되어야 한다.", () => {
     const { getByTestId } = render(<EventZone {...defaultProps} />);
     const eventZone = getByTestId("event-zone");
 
@@ -42,7 +42,7 @@ describe("EventZone", () => {
     expect(eventZone.props.rotation).toEqual(defaultProps.rotation);
   });
 
-  it("contains meshStandardMaterial with correct props", () => {
+  it("props에 meshStandardMaterial이 포함되어야 한다.", () => {
     const { getByTestId } = render(<EventZone {...defaultProps} />);
     const eventZone = getByTestId("event-zone");
 

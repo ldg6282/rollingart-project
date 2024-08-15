@@ -16,8 +16,8 @@ jest.mock("@react-three/drei/native", () => {
   };
 });
 
-describe("ColliderBox", () => {
-  it("renders correctly", () => {
+describe("ColliderBox 컴포넌트", () => {
+  it("정확하게 렌더링되어야 한다.", () => {
     const { getByTestId } = render(<ColliderBox />);
     const colliderBox = getByTestId("collider-box");
     expect(colliderBox).toBeTruthy();

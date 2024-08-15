@@ -20,7 +20,7 @@ export default function StaticBall({ currentBallPatternTexture }) {
   });
 
   return (
-    <mesh ref={mesh}>
+    <mesh ref={mesh} testID="static-ball-mesh">
       <sphereGeometry args={[2, 32, 32]} />
       <meshStandardMaterial map={texture} />
     </mesh>
