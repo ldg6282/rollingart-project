@@ -183,7 +183,7 @@ export default function Stage0Screen() {
           isAnimating={isAnimating}
         />
         <View style={styles.uiContainer}>
-          <TouchableOpacity onPress={handleMainButtonTouch}>
+          <TouchableOpacity testID="main-button" onPress={handleMainButtonTouch}>
             <Image style={styles.Images} source={MainButtonImage} />
           </TouchableOpacity>
           <View style={styles.textContainer}>
@@ -191,26 +191,30 @@ export default function Stage0Screen() {
             <Text style={styles.timeText}>{timeLeft}</Text>
           </View>
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={{ marginRight: 10 }} onPress={handelQuestionButtonTouch}>
+            <TouchableOpacity
+              testID="question-button"
+              style={{ marginRight: 10 }}
+              onPress={handelQuestionButtonTouch}
+            >
               <Image style={styles.Images} source={questionImage} />
             </TouchableOpacity>
             {isPauseButtonVisible ? (
-              <TouchableOpacity onPress={handleGamePauseButtonTouch}>
+              <TouchableOpacity testID="pause-button" onPress={handleGamePauseButtonTouch}>
                 <Image style={styles.Images} source={pauseButtonImage} />
               </TouchableOpacity>
             ) : (
-              <TouchableOpacity onPress={handleGameResumeButtonTouch}>
+              <TouchableOpacity testID="play-button" onPress={handleGameResumeButtonTouch}>
                 <Image style={styles.Images} source={playButtonImage} />
               </TouchableOpacity>
             )}
           </View>
         </View>
         <View style={styles.countContainer}>
-          <TouchableOpacity onPress={handleDecreaseCount}>
+          <TouchableOpacity testID="decrease-button" onPress={handleDecreaseCount}>
             <Image style={styles.Images} source={decreaseImage} />
           </TouchableOpacity>
           <Text style={styles.countText}>{sensitiveCount}</Text>
-          <TouchableOpacity onPress={handleIncreaseCount}>
+          <TouchableOpacity testID="increase-button" onPress={handleIncreaseCount}>
             <Image style={styles.Images} source={increaseImage} />
           </TouchableOpacity>
         </View>

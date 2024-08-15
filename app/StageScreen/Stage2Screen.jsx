@@ -186,6 +186,7 @@ export default function Stage2Screen() {
       )}
       <View style={styles.container}>
         <Game3DScene
+          testID="game-3d-scene"
           isOverlayVisible={isOverlayVisible}
           onGameStart={onGameStart}
           onGameOver={onGameOver}
@@ -203,7 +204,7 @@ export default function Stage2Screen() {
           isAnimating={isAnimating}
         />
         <View style={styles.uiContainer}>
-          <TouchableOpacity onPress={handleMainButtonTouch}>
+          <TouchableOpacity testID="main-button" onPress={handleMainButtonTouch}>
             <Image style={styles.Images} source={MainButtonImage} />
           </TouchableOpacity>
           <View style={styles.textContainer}>
@@ -211,29 +212,36 @@ export default function Stage2Screen() {
             <Text style={styles.timeText}>{timeLeft}</Text>
           </View>
           {isPauseButtonVisible ? (
-            <TouchableOpacity onPress={handleGamePauseButtonTouch}>
+            <TouchableOpacity testID="pause-button" onPress={handleGamePauseButtonTouch}>
               <Image style={styles.Images} source={pauseButtonImage} />
             </TouchableOpacity>
           ) : (
-            <TouchableOpacity onPress={handleGameResumeButtonTouch}>
+            <TouchableOpacity testID="play-button" onPress={handleGameResumeButtonTouch}>
               <Image style={styles.Images} source={playButtonImage} />
             </TouchableOpacity>
           )}
         </View>
         {isSensitiveButtonVisible ? (
           <View style={styles.countContainer}>
-            <TouchableOpacity onPress={handleDecreaseCount}>
+            <TouchableOpacity testID="decrease-button" onPress={handleDecreaseCount}>
               <Image style={styles.Images} source={decreaseImage} />
             </TouchableOpacity>
             <Text style={styles.countText}>{sensitiveCount}</Text>
-            <TouchableOpacity onPress={handleIncreaseCount}>
+            <TouchableOpacity testID="increase-button" onPress={handleIncreaseCount}>
               <Image style={styles.Images} source={increaseImage} />
             </TouchableOpacity>
           </View>
         ) : null}
       </View>
-      {!isAnimating && <ChallengeModal currentStage={currentStage} setIsPaused={setIsPaused} />}
+      {!isAnimating && (
+        <ChallengeModal
+          testID="challenge-modal"
+          currentStage={currentStage}
+          setIsPaused={setIsPaused}
+        />
+      )}
       <GameResultModal
+        testID="game-result-modal"
         visible={isGameResultModalVisible}
         currentStage={currentStage}
         gameResultMessage={gameResultMessage}
