@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react-native";
+import { render, waitFor } from "@testing-library/react-native";
 import { View } from "react-native";
 
 import Game3DScreen from "../../app/Game3DScene/Game3DScene";
@@ -65,22 +65,30 @@ describe("Game3DScreen", () => {
     isAnimating: false,
   };
 
-  it("정상적으로 렌더링 되어야 한다.", () => {
-    render(<Game3DScreen {...defaultProps} />);
+  it("정상적으로 렌더링 되어야 한다.", async () => {
+    await waitFor(() => {
+      render(<Game3DScreen {...defaultProps} />);
+    });
   });
 
-  it("currentStage 값이 1일 때 Stage1Land가 렌더링 되어야 한다.", () => {
-    render(<Game3DScreen {...defaultProps} currentStage={1} />);
+  it("currentStage 값이 1일 때 Stage1Land가 렌더링 되어야 한다.", async () => {
+    await waitFor(() => {
+      render(<Game3DScreen {...defaultProps} currentStage={1} />);
+    });
     expect(Stage1Land).toHaveBeenCalled();
   });
 
-  it("currentStage 값이 2일 때 Stage2Land가 렌더링 되어야 한다.", () => {
-    render(<Game3DScreen {...defaultProps} currentStage={2} />);
+  it("currentStage 값이 2일 때 Stage2Land가 렌더링 되어야 한다.", async () => {
+    await waitFor(() => {
+      render(<Game3DScreen {...defaultProps} currentStage={2} />);
+    });
     expect(Stage2Land).toHaveBeenCalled();
   });
 
-  it("currentStage 값이 0일 때 TutorialStageLand가 렌더링 되어야 한다.", () => {
-    render(<Game3DScreen {...defaultProps} currentStage={0} />);
+  it("currentStage 값이 0일 때 TutorialStageLand가 렌더링 되어야 한다.", async () => {
+    await waitFor(() => {
+      render(<Game3DScreen {...defaultProps} currentStage={0} />);
+    });
     expect(TutorialStageLand).toHaveBeenCalled();
   });
 });
