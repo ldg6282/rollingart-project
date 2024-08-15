@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react-native";
+import { render, waitFor } from "@testing-library/react-native";
 import GameResultModal from "../components/GameResultModal/GameResultModal";
 
 jest.mock("expo-router", () => ({
@@ -8,12 +8,12 @@ jest.mock("expo-router", () => ({
 }));
 
 jest.mock("@react-native-async-storage/async-storage", () => ({
-  getItem: jest.fn(),
-  setItem: jest.fn(),
+  getItem: jest.fn(() => Promise.resolve(null)),
+  setItem: jest.fn(() => Promise.resolve()),
 }));
 
 describe("GameResultModal", () => {
-  it("정상적으로 렌더링 되어야 한다.", () => {
+  it("정상적으로 렌더링 되어야 한다.", async () => {
     const { getByText } = render(
       <GameResultModal
         visible
@@ -24,7 +24,9 @@ describe("GameResultModal", () => {
       />,
     );
 
-    expect(getByText("훌륭합니다!")).toBeTruthy();
-    expect(getByText("일치율 70%")).toBeTruthy();
+    await waitFor(() => {
+      expect(getByText("훌륭합니다!")).toBeTruthy();
+      expect(getByText("일치율 70%")).toBeTruthy();
+    });
   });
 });

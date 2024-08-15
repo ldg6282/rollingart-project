@@ -1,5 +1,4 @@
-import React from "react";
-import { render } from "@testing-library/react-native";
+import { render, waitFor } from "@testing-library/react-native";
 import { Stage1Land, Stage2Land, TutorialStageLand } from "../components/Land/Land";
 
 jest.mock("@/utils/getAssetUri.js", () => jest.fn(() => "mockedUri"));
@@ -37,35 +36,41 @@ describe("Land 컴포넌트", () => {
     jest.clearAllMocks();
   });
 
-  it("Stage1Land이 정상적으로 렌더링 되어야 한다", () => {
-    render(
-      <Stage1Land
-        setLandRef={mockSetLandRef}
-        setColliderRef={mockSetColliderRef}
-        startZoneRef={mockStartZoneRef}
-        endZoneRef={mockEndZoneRef}
-        onGameStart={mockOnGameStart}
-        onGameOver={mockOnGameOver}
-        setCorrectPath={mockSetCorrectPath}
-      />,
-    );
+  it("Stage1Land이 정상적으로 렌더링 되어야 한다", async () => {
+    await waitFor(() => {
+      render(
+        <Stage1Land
+          setLandRef={mockSetLandRef}
+          setColliderRef={mockSetColliderRef}
+          startZoneRef={mockStartZoneRef}
+          endZoneRef={mockEndZoneRef}
+          onGameStart={mockOnGameStart}
+          onGameOver={mockOnGameOver}
+          setCorrectPath={mockSetCorrectPath}
+        />,
+      );
+    });
   });
 
-  it("Stage2Land가 정상적으로 렌더링 되어야 한다", () => {
-    render(
-      <Stage2Land
-        setLandRef={mockSetLandRef}
-        setColliderRef={mockSetColliderRef}
-        startZoneRef={mockStartZoneRef}
-        endZoneRef={mockEndZoneRef}
-        onGameStart={mockOnGameStart}
-        onGameOver={mockOnGameOver}
-        setCorrectPath={mockSetCorrectPath}
-      />,
-    );
+  it("Stage2Land가 정상적으로 렌더링 되어야 한다", async () => {
+    await waitFor(() => {
+      render(
+        <Stage2Land
+          setLandRef={mockSetLandRef}
+          setColliderRef={mockSetColliderRef}
+          startZoneRef={mockStartZoneRef}
+          endZoneRef={mockEndZoneRef}
+          onGameStart={mockOnGameStart}
+          onGameOver={mockOnGameOver}
+          setCorrectPath={mockSetCorrectPath}
+        />,
+      );
+    });
   });
 
-  it("TutorialStageLand가 정상적으로 렌더링 되어야 한다.", () => {
-    render(<TutorialStageLand setLandRef={mockSetLandRef} />);
+  it("TutorialStageLand가 정상적으로 렌더링 되어야 한다.", async () => {
+    await waitFor(() => {
+      render(<TutorialStageLand setLandRef={mockSetLandRef} />);
+    });
   });
 });
