@@ -74,7 +74,11 @@ RollingArt는 스마트폰을 기울여 공을 조작해 정해진 길을 따라
     - [2. 공의 회전 방향을 어떻게 설정할까?](#2-공의-회전-방향을-어떻게-설정할까)
     - [3. 물리 법칙 어떻게 만들까?](#3-물리-법칙-어떻게-만들까)
   - [센서 데이터 인식의 차이](#센서-데이터-인식의-차이)
-- [🎮 Stage 2](#-stage-2-그래픽)
+- [🎮 Stage 3](#-stage-2-커스텀-훅을-이용한-타이머의-정확한-계산)
+  - [1. 왜 정확한 시간 계산이 중요했을까?](#1-왜-정확한-시간-계산이-중요했을까)
+  - [2. 어떻게 정확한 시간을 계산할까?](#2-어떻게-정확한-시간을-계산할까)
+  - [3. 앱의 상태에 따른 useTimer 커스텀 훅의 사용](#3-앱의-상태에-따른-usetimer-커스텀-훅의-사용)
+- [🎮 Stage 2](#-stage-3-그래픽)
   - [공의 이동에 따른 실시간 텍스처를 변형](#공의-이동에-따른-실시간-텍스처를-변형)
     - [1. 셰이더란 무엇이며, 어떻게 활용할 수 있을까?](#1-셰이더란-무엇이며-어떻게-활용할-수-있을까)
     - [2. Vertex Shader는 좌표를 변환하고 Fragment Shader는 그림을 그린다](#2-vertex-shader는-좌표를-변환하고-fragment-shader는-그림을-그린다)
@@ -292,7 +296,124 @@ function normalizeSensorData(data) {
 그 결과 `Android`와 `iOS`에서의 공의 이동 방향이 모두 일치하는 것을 확인할 수 있었습니다.
 </br><br><br><br>
 
-# 🎮 Stage 2, 그래픽
+# 🎮 Stage 2, 커스텀 훅을 이용한 타이머의 정확한 계산
+RollingArt에서 타이머는 중요한 요소중 하나였습니다.
+
+### 1. 왜 정확한 시간 계산이 중요했을까?
+#### 점수 계산의 공정성
+  - 각 스테이지의 클리어 시간이 게임 결과에 직접적인 영향을 미치기 때문에, 타이머 정확성이 요구되었습니다.<br>
+  
+#### 사용자 경험
+  - 부정확한 타이머는 게임의 신뢰도를 떨어뜨리고 사용자 만족도에 악영향을 줄 수 있었습니다.<br>
+  
+#### 크로스 플랫폼 일관성
+  - iOS와 Android에서 동일한 사용자 경험을 제공하기 위해 플랫폼 간 일관된 시간 측정이 필요했습니다.<br>
+  
+#### 앱 상태 변화
+  - 사용자가 게임 중 다른 앱으로 전환했다가 돌아올 때 대응이 가능해야 했습니다.<br>
+  - 전화나 알림으로 인해 앱이 일시 중단되었다가 재개될 때 대응이 가능해야 했습니다.<br>
+  
+#### 디바이스 성능 차이
+  - 성능이 좋지 못한 기기에서 버벅임이 발생할 때 대응이 가능해야 했습니다.<br>
+  - 기기 간 CPU 성능 차이로 인한 처리 속도가 일치하지 않을 때 대응이 가능해야 했습니다.
+<br>
+
+### 2. 어떻게 정확한 시간을 계산할까?
+시간 계산은 JavaScript의 `Date.now()` 함수를 사용하여 구현했습니다.
+`Date.now()`는 1970년 1월 1일 00:00:00 UTC부터 현재까지의 경과 시간을 밀리초 단위로 반환하는 함수입니다.
+
+``` js
+const [timeLeft, setTimeLeft] = useState(initialTime);
+const startTimeRef = useRef(null);
+const accumulatedTimeRef = useRef(0);
+
+// 시간 계산
+const calculateTime = () => {
+  const now = Date.now();
+  const elapsedTime = (now - startTimeRef.current) / 1000 + accumulatedTimeRef.current;
+  const newTimeLeft = Math.max(initialTime - elapsedTime, 0);
+  setTimeLeft(Math.floor(newTimeLeft));
+};
+```
+#### 시작 시간 기록
+  - 타이머가 시작될 때 현재 시간을 startTimeRef에 저장합니다.<br>
+
+#### 경과 시간 계산
+  - 현재 시간에서 시작 시간을 빼서 경과 시간을 계산합니다.<br>
+
+#### 남은 시간 계산
+  - 초기 설정 시간에서 경과 시간을 빼서 남은 시간을 계산합니다.<br>
+
+#### 시간 상태 업데이트
+  - 계산된 남은 시간으로 컴포넌트의 상태를 업데이트합니다.
+<br>
+
+### 3. 앱의 상태에 따른 useTimer 커스텀 훅의 사용
+앱이 백그라운드로 전환되거나 다시 포그라운드로 돌아올 때 타이머의 정확성을 유지하는 것이 중요했습니다.
+
+<details>
+<summary>🤔백그라운드와 포그라운드란❓</summary>
+
+#### 백그라운드 (Background)
+  - 백그라운드는 앱이 실행 중이지만 현재 화면에 보이지 않는 상태를 말합니다.<br>
+  
+#### 포그라운드(Foreground)
+  - 포그라운드는 앱이 사용자의 화면에 보이고 있으며 사용자와 직접 상호작용하고 있는 상태를 말합니다.
+</details>
+
+#### startTimer 함수
+
+``` js
+const startTimer = useCallback(() => {
+  setIsTimeRunning(true);
+  startTimeRef.current = Date.now();
+  intervalIdRef.current = setInterval(calculateTime, 100);
+}, []);
+```
+#### 게임 시작 시
+  - 사용자가 스타트 존을 통과하면 startTimer 함수가 호출됩니다. 이때 화면에 시간이 카운트다운되기 시작합니다.
+#### 일시 정지 후 재개 시
+  - 게임 중 일시 정지 기능을 사용한 후, 플레이어가 재개 버튼을 터치하면 startTimer 함수가 호출되고, 이전에 멈춘 시점부터 타이머가 다시 작동합니다.
+#### 포그라운드로 전환 시
+  - 백그라운드 상태에서 다시 RollingArt로 돌아오면, 앱이 포그라운드 상태가 되면서 startTimer 함수가 호출되고, 이전에 멈춘 시점부터 타이머가 다시 작동합니다.
+
+#### stopTimer 함수
+
+``` js
+const stopTimer = useCallback(() => {
+  clearInterval(intervalIdRef.current);
+  accumulatedTimeRef.current += (Date.now() - startTimeRef.current) / 1000;
+  setIsTimeRunning(false);
+}, []);
+```
+
+#### 게임 일시 정지 시
+  - 사용자가 게임 중 일시 정지 버튼을 터치 stopTimer 함수가 호출됩니다. 화면의 타이머가 멈추고, 현재까지의 경과 시간이 저장되어 게임을 재개할 때 사용됩니다.
+#### 스테이지 클리어 시
+  - 사용자가 피니시 존을 통과하면 자동으로 stopTimer 함수가 호출됩니다. 이를 통해 스테이지 클리어에 걸린 정확한 시간을 측정하고, 도전 과제 달성 여부를 판별합니다.
+#### 백그라운드로 전환 시
+  - RollingArt가 백그라운드 상태가 되면 stopTimer 함수가 호출됩니다. 
+
+####  resetTimer 함수
+
+``` js
+const resetTimer = useCallback(() => {
+  stopTimer();
+  accumulatedTimeRef.current = 0;
+  setTimeLeft(initialTime);
+  startTimer();
+}, [initialTime, stopTimer, startTimer]);
+```
+
+#### 스테이지 접속 시
+  - 사용자가 새로 스테이지에 접속하거나, 게임 오버 후 다시하기를 선택할 때 resetTimer 함수가 호출됩니다. 타이머가 초기 설정 시간으로 리셋됩니다.
+  - 
+
+타이머를 커스텀 훅으로 구현함으로써 보다 정확한 타이머의 적용이 가능했습니다.
+</br><br><br><br>
+
+
+# 🎮 Stage 3, 그래픽
 
 ## 공의 이동에 따른 실시간 텍스처를 변형
 
